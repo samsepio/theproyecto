@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
     "mongoose": "^5.7.4",
     "morgan": "^1.9.1",

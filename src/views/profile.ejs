@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+                <meta charset="utf-8">
+                <meta name="author"content="walter">
+                <title>theproyect</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+	<bodyIngresar</button>>
+                <nav class="navbar navbar-light bg-light">
+                        <a class="navbar-brand" href="/">Inicio</a>
+                        <a class="navbar-brand mx-auto"href="/signup">Registrate</a>
+                        <a class="navbar-brand mx-auto"href="/signin">Inicia Sesion</a>
+                </nav>
+                <br><center><h1>Completa Tu Perfil</h1></center>
+                <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body mx-auto">
+				<form action="/profile"method="POST">
+					<label>Nombres</label>
+					<input type="text"name="name"class="form-control"placeholder="Ingrese Sus Nombres">
+					<label>Apellidos</label>
+					<input type="text"name="last"class="form-control"placeholder="Ingrese Sus Apellidos">
+					<label>Intereses</label>
+					<textarea name="interest"class="form-contorl"placeholder="Intereses Personales"></textarea>
+					<label>Chica</label>
+					<input type="text"name="women"class="form-control"placeholder="cual es la chica mas linda del colegio">
+					<label>Religion</label>
+					<input type="text"name="religion"class="form-contorl"placeholder="Religion">
+					<label>Foto</label>
+					<input type="file">
+					<label>Pelicula Favorita</label>
+					<input type="text"name="movie"class="form-control"placeholder="Pelicula Favorita">
+					<button class="btn btn-primary btn-block"type="submit">Ingresar</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

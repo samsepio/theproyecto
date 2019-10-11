@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author"content="walter">
+		<title>theproyect</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="/">Inicio</a>
+			<a class="navbar-brand mx-auto"href="/signup">Registrate</a>
+			<a class="navbar-brand mx-auto"href="/signin">Inicia Sesion</a>
+		</nav>
+		<br><center><h1>Registrate</h1></center>
+		<div class="card mx-auto" style="width: 18rem;">
+			<div class="card-body mx-auto">
+				<form action="/signup"method="POST">
+					<label>Usuario</label>
+					<input type="text"name="user"class="form-control"placeholder="Ingrese Un Usuario">
+					<label>Correo</label>
+					<input type="email"name="email"class="form-control"placeholder="Ingrese Un Correo">
+					<label>Contraseña</label>
+					<input type="password"name="password"class="form-control"placeholder="Ingrese Una Contraseña">
+					<br><button class="btn btn-primary btn-block">Registrarme</button>
+					<a href="/signup" class="card-link">ya tengo una cuenta</a>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

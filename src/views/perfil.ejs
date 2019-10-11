@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+                <meta charset="utf-8">
+                <meta name="author"content="walter">
+                <title>theproyect</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+        <body>
+                <nav class="navbar navbar-dark bg-dark">
+                        <a class="navbar-brand" href="/perfil">perfil</a>
+                        <a class="navbar-brand"href="/friends">Amigos</a>
+			<a class="navbar-brand mx-auto"href="/">salir</a>
+                </nav>
+		<br>
+		<% profiles.forEach(function (profiles) { %>
+		<div class="card mx-auto" style="width: 34rem;">
+			<img src="..." class="card-img-top mx-auto" alt="...">
+			<div class="card-body mx-auto">
+				<label>Nombre</label>
+				<p><%= profiles.name %></p>
+				<label>Apellido</label>
+				<p><%= profiles.last  %></p>
+				<label>Intereses</label>
+				<p><%= profiles.interest %></p>
+				<label>Religion</label>
+				<p><%= profiles.religion  %></p>
+				<label>La Chica Mas Linda Segun El</label>
+				<p><%= profiles.women  %></p>
+				<label>Pelicula Preferida</label>
+				<p><%= profiles.movie  %></p>
+				</div>
+			</div>
+		</div>
+		<% }) %>
+		 <div class="card mx-auto"style="width 14rem">
+                                        <div class="card-body mx-auto">
+                                                <form action="/comentary"method="POST">
+                                                        <h4 class="card-subtitle">Comentar Este Perfil</h4>
+                                                        <textarea name="comentary"class="form-control"placeholder="Comentario"></textarea>
+                                                        <button class="btn btn-info btn-block">Comentar Imagen</button>
+                                                        <label>Comentarios</label>
+							<% if(comentarys) { %>
+                                                        <div><%= comentarys  %></div>
+							<% } %>
+                                                </form>
+                                        </div>
+		 </div>
+	</body>
+</html>
