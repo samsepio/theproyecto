@@ -16,6 +16,9 @@
 		<div class="card mx-auto" style="width: 18rem;">
 			<div class="card-body mx-auto">
 				<form action="/signup"method="POST">
+					<% if(signupMessage) { %>
+					  <div><%= signupMessage  %></div>
+					<% } %>
 					<label>Usuario</label>
 					<input type="text"name="user"class="form-control"placeholder="Ingrese Un Usuario">
 					<label>Correo</label>
@@ -23,7 +26,7 @@
 					<label>Contraseña</label>
 					<input type="password"name="password"class="form-control"placeholder="Ingrese Una Contraseña">
 					<br><button class="btn btn-primary btn-block">Registrarme</button>
-					<a href="/signup" class="card-link">ya tengo una cuenta</a>
+					<a href="/signin" class="card-link">ya tengo una cuenta</a>
 				</form>
 			</div>
 		</div>

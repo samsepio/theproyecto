@@ -1,6 +1,7 @@
 const express=require('express');
 const router = express.Router();
 const User=require('../model/database');
+const passport=require('passport');
 const Profile=require('../model/database2');
 const Comentary=require('../model/database3');
 
@@ -84,11 +85,18 @@ router.post('/profile',async(req,res,next)=>{
 router.get('/signup',(req,res,next)=>{
 	res.render('signup');
 });
-router.post('/signup',async(req,res,next)=>{
-	const user = new User(req.body);
-	await user.save();
-	console.log(user);
-	res.redirect('/profile');
+router.post('/signup',passport.authenticate('local-signup',{
+	successRedirect: '/profile',
+	failureRedirect: '/signup',
+	passReqToCallback: true	
+}));
+router.get('/signin',(req,res,next)=>{
+	res.render('signin');
 });
+router.post('/signin',passport.authenticate('local-signin',{
+	successRedirect: '/perfil',
+	failureRedirect: '/signin',
+	passReqToCallback: true
+}));
 
 module.exports = router;
