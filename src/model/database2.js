@@ -7,7 +7,11 @@ const profileSchema = Schema({
 	interest:{type: String},
 	religion:{type: String},
 	women:{type: String},
-	movie:{type: String}
+	movie:{type: String},
+	filename:{type: String},
+	path:{type: String},
+	originalname:{type: String},
+	size:{type: String}
 });
 
 module.exports = mongoose.model('profiles',profileSchema);

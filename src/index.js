@@ -19,11 +19,21 @@ app.set('views',path.join(__dirname,'./views'));
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
+const storage = multer.diskStorage({
+	destination: path.join(__dirname, 'public/img/uploads'),
+	filename:(req,file,cb,filename) => {
+		cb(null, uuid() + path.extname(file.originalname));
+	}
+});
+app.use(multer({
+	storage
+}).single('image'));
+/*
 app.use(async(req,res,next) => {
 	const comentarys = await Comentary.find();
 	app.locals.comentarys = (comentarys);
 	next();
-});
+*/
 app.use(require('./routes'));
 
 app.use(express.static(path.join(__dirname,'./public')));

@@ -10,12 +10,13 @@
                 <nav class="navbar navbar-dark bg-dark">
                         <a class="navbar-brand" href="/perfil">perfil</a>
                         <a class="navbar-brand"href="/friends">Amigos</a>
+			<a class="navbar-brand"href="/profiles">Perfiles</a>
 			<a class="navbar-brand mx-auto"href="/">salir</a>
                 </nav>
 		<br>
 		<% profiles.forEach(function (profiles) { %>
 		<div class="card mx-auto" style="width: 34rem;">
-			<img src="..." class="card-img-top mx-auto" alt="...">
+			<img src="<%= profiles.path  %>" class="card-img-top mx-auto" alt="<%= profiles.filename  %>">
 			<div class="card-body mx-auto">
 				<label>Nombre</label>
 				<p><%= profiles.name %></p>
@@ -31,20 +32,16 @@
 				<p><%= profiles.movie  %></p>
 				</div>
 			</div>
-		</div>
-		<% }) %>
-		 <div class="card mx-auto"style="width 14rem">
+			  <div class="card mx-auto"style="width 14rem">
                                         <div class="card-body mx-auto">
                                                 <form action="/comentary"method="POST">
                                                         <h4 class="card-subtitle">Comentar Este Perfil</h4>
                                                         <textarea name="comentary"class="form-control"placeholder="Comentario"></textarea>
-                                                        <button class="btn btn-info btn-block">Comentar Imagen</button>
-                                                        <label>Comentarios</label>
-							<% if(comentarys) { %>
-                                                        <div><%= comentarys  %></div>
-							<% } %>
+							<button class="btn btn-info btn-block">Comentar</button>
                                                 </form>
                                         </div>
-		 </div>
+			  </div>
+		</div>
+		<% }) %>
 	</body>
 </html>

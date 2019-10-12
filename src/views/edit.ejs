@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+                <meta charset="utf-8">
+                <meta name="author"content="walter">
+                <title>theproyect</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+        <body>
+                <nav class="navbar navbar-dark bg-dark">
+                        <a class="navbar-brand" href="/perfil">perfil</a>
+                        <a class="navbar-brand"href="/friends">Amigos</a>
+                        <a class="navbar-brand mx-auto"href="/">salir</a>
+                </nav>
+                <br><center><h1>Editar Comentario</h1></center>
+		  <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body mx-auto">
+				<form action="/edit/<%= comentarys._id  %>"method="POST">
+					<textarea class="form-control"name="comentary"><%= comentarys.comentary  %></textarea>
+					<button type="submit"class="btn btn-primary btn-block">Editar</button>
+				</form>
+			</div>
+		  </div>
+	</body>
+</html>
+

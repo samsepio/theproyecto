@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+                <meta charset="utf-8">
+                <meta name="author"content="walter">
+                <title>theproyect</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+        <body>
+                <nav class="navbar navbar-dark bg-dark">
+                        <a class="navbar-brand" href="/perfil">perfil</a>
+                        <a class="navbar-brand"href="/friends">Amigos</a>
+                        <a class="navbar-brand mx-auto"href="/">salir</a>
+                </nav>
+		<br><center><h1>Comentarios De Este Perfil</h1></center>
+		<% comentarys.forEach(function (comentarys) { %>
+		<div class="card" style="width: 18rem;">
+			<div class="card-body">
+				<p class="card-text"><%= comentarys.comentary  %></p>
+				<a href="/delete/<%=comentarys._id%>"class="btn btn-danger">Eliminar</a>
+				<a href="/edit/<%=comentarys._id%>"class="btn btn-info">Editar</a>
+				<a href="/like/<%=comentarys._id%>"class="btn <%= comentarys.status ? 'btn-success':'btn-dark' %>">Megusta</a>
+				<a href="/dislike/<%=comentarys._id%>"class="btn <%= comentarys.status ? 'btn-danger':'btn-dark'%>">Nomegusta</a>
+			</div>
+		 </div>
+		<% }) %>
+	</body>
+</html>
+
+
